@@ -4,7 +4,7 @@
 
 # 01-mySolution
 fibonacci_sequence = [1, 2]
-even_sum = []
+even_num = []
 i = 1
 
 while fibonacci_sequence[-1] < 4000000
@@ -12,5 +12,5 @@ while fibonacci_sequence[-1] < 4000000
     i += 1
 end
 
-fibonacci_sequence.each { |n| even_sum << n if n % 2 == 0 }
-puts even_sum.sum
+fibonacci_sequence.each { |n| even_num << n if n % 2 == 0 }
+puts even_num.sum

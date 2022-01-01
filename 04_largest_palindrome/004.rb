@@ -5,12 +5,8 @@ numbers = (100..999).to_a.product((100..999).to_a)
 products = numbers.map { |num| num[0] * num[1] }
 palindromes = []
 
-products.each do |n|
-    if n == n.to_s.reverse.to_i
-        palindromes << n
-    end    
-end
-p palindromes.max
+products.each { |n| palindromes << n if n == n.to_s.reverse.to_i }
+puts palindromes.max
 
 # 02 - solution
 

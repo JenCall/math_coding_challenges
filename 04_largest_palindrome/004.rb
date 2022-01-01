@@ -4,7 +4,12 @@
 
 max = 999 * 999
 min = 100 * 100
-p max
-p min
-(min..max).each do |n|
+
+new_array = []
+(min...max).each do |n|
+    if n == n.to_s.reverse.to_i
+        new_array << n
+    end    
 end
+
+p new_array.max

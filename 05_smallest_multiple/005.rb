@@ -5,16 +5,10 @@
 # What is the smallest positive number that is evenly 
 # divisible by all of the numbers from 1 to 20?
 
-divisible = (2..20).to_a
+# 01-Soultion - works with example:
 
-(2520..10000).each do |n|
-    teste = []
-    divisible.each do |d|
-        if n % d == 0
-            teste << n
-        end
-        if teste.count > 18
-            p n
-        end
-    end        
+(1..10000).each do |n|
+    nums = []
+    (1..10).to_a.each { |d| nums << n if n % d == 0 }
+    puts n if nums.count == 10      
 end

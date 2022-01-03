@@ -11,4 +11,13 @@ def find_square(n)
     sum_squares
 end
 
-p find_square(100)
+def find_sum_square(n)
+    sum = (1..n).sum
+    sum * sum
+end
+
+def find_square_difference(n)
+    find_sum_square(n) - find_square(n)
+end
+
+p find_square_difference(100)

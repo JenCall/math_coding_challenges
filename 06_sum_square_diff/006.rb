@@ -4,9 +4,11 @@
 
 
 def find_square(n)
-    sum_squares = []
+    sum_squares = 0
     (1..n).to_a.each do |n|
+        sum_squares += (n * n)
     end
+    sum_squares
 end
 
 p find_square(100)

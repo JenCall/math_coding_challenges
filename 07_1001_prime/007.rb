@@ -1,7 +1,7 @@
 # Problem 07
+# Find the 10001st prime number
 
 # 01 - Solution
-
 require 'prime'
 
 def find_10001_Prime(n)

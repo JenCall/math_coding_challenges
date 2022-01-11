@@ -103,11 +103,13 @@ digits = "37107287533902102798797998220837590246510135740250
 
 numbers = digits.split("\n")
 
-sum = []                
-
-numbers.each do |num|
-    number = num.to_i
-    sum << number
+def large_sum(numbers)
+    # only works with an array, not with sum
+    sum = []                
+    # loop to convert each number to integer and insert to the array to apply a sum 
+    numbers.each { |num| number = num.to_i }
+    # results
+    puts "Result: #{sum.sum.to_s[0..9]}"
 end
 
-p sum.sum.to_s[0..9]
+large_sum(numbers)

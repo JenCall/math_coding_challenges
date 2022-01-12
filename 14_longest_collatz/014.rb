@@ -8,16 +8,18 @@
 def longest_collatz(n)
 list = [n] 
 total = [] 
-  
-    while n > 1    
-        if n % 2 == 0
-            n = n / 2
-        else
-            n = 3 * n + 1
+    (100..n).to_a.each do |n| 
+        while n > 1    
+            if n % 2 == 0
+                n = n / 2
+            else
+                n = 3 * n + 1
+            end
+            list << n
         end
-        list << n
+        total << list
     end
-    p list
+    p total.count
 end
 
-longest_collatz(15)
+longest_collatz(102)

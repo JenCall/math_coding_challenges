@@ -6,9 +6,10 @@
 # n → 3n + 1 (n is odd)
 
 def longest_collatz(n)
-list = [n] 
-total = [] 
-    (100..n).to_a.each do |n| 
+ 
+total = {} 
+    (2..n).to_a.each do |n| 
+        list = [n]
         while n > 1    
             if n % 2 == 0
                 n = n / 2
@@ -17,9 +18,10 @@ total = []
             end
             list << n
         end
-        total << list
+        total[list[0]] = list
+        # total << list
     end
-    p total.count
+    p total.size
 end
 
-longest_collatz(102)
+longest_collatz(13)

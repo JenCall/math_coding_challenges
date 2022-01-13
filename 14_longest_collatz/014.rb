@@ -5,9 +5,8 @@
 # n → n/2 (n is even)
 # n → 3n + 1 (n is odd)
 
-def longest_collatz(n)
- 
-total = {} 
+def find_values(n)
+    total = {} 
     (2..n).to_a.each do |n| 
         list = [n]
         while n > 1    
@@ -21,7 +20,13 @@ total = {}
         total[list[0]] = list
         # total << list
     end
-    p total.size
+    # p total
+    longest_collatz(total)
 end
 
-longest_collatz(13)
+def longest_collatz(values)
+    value = values.sort_by {|_key, value| value.count }
+    p value[-1]
+end    
+
+find_values(1000000)

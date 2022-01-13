@@ -26,7 +26,7 @@ end
 
 def longest_collatz(values)
     value = values.sort_by {|_key, value| value.count }
-    p value[-1][0]
+    puts "Result: #{value[-1][0]}" 
 end    
 
 find_values(1000000)

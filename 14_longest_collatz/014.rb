@@ -7,7 +7,7 @@
 
 def find_values(n)
     total = {} 
-    (2..n).to_a.each do |n| 
+    (500000..n).to_a.each do |n| 
         list = [n]
         while n > 1    
             if n % 2 == 0
@@ -26,7 +26,7 @@ end
 
 def longest_collatz(values)
     value = values.sort_by {|_key, value| value.count }
-    p value[-1]
+    p value[-1][0]
 end    
 
 find_values(1000000)

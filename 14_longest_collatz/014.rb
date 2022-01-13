@@ -18,9 +18,7 @@ def find_values(n)
             list << n
         end
         total[list[0]] = list
-        # total << list
     end
-    # p total
     longest_collatz(total)
 end
 

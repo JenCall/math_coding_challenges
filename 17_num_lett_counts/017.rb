@@ -1,26 +1,17 @@
 # Problem 17
 
-gem 'humanize', '~> 1.1'
-
 require 'humanize'
 
 def coverter(n)
-    words = Array.new
-    (1..n).to_a.each { |i| words << i.humanize }
-    p words
-    concats(words)
+    concats( (1..n).to_a.map { |i| i.humanize } )
 end
 
 def concats(words)
-    concatenated = words.flatten
-    sum_letters(concatenated)
+    count_letters(words.flatten)
 end
 
-def sum_letters(words)
-    # list = words
+def count_letters(words)
     p words.reduce(:concat).tr("-","").tr(" ","").split("").count
-
 end
-
 
 coverter(1000)

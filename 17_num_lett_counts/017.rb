@@ -13,15 +13,14 @@ end
 
 def concats(words)
     concatenated = words.flatten
-    # sum_letters(concatenated)
+    sum_letters(concatenated)
 end
 
-def sum_letters()
-    words = ["three", "three", "five", "four", "four"]
+def sum_letters(words)
     list = words.uniq
     
     p list
 end
 
-sum_letters
-# coverter(5)
+
+coverter(5)

@@ -7,7 +7,7 @@ require 'humanize'
 def coverter(n)
     words = Array.new
     (1..n).to_a.each { |i| words << i.humanize }
-    
+    p words
     concats(words)
 end
 
@@ -17,10 +17,10 @@ def concats(words)
 end
 
 def sum_letters(words)
-    list = words.uniq
-    
-    p list
+    # list = words
+    p words.reduce(:concat).tr("-","").tr(" ","").split("").count
+
 end
 
 
-coverter(5)
+coverter(1000)

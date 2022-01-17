@@ -13,6 +13,7 @@ end
 
 def sum_digits(num)
    digits = num.to_s.split("").map { |n| n.to_i }.sum
+   puts "Sum of 100! digits: #{digits}"
 end
 
-p find_factorial(100)
+find_factorial(100)

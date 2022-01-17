@@ -12,8 +12,7 @@ def find_factorial(num)
 end
 
 def sum_digits(num)
-    
+   digits = num.to_s.split("").map { |n| n.to_i }.sum
 end
 
-
-find_factorial(10)
+p find_factorial(100)

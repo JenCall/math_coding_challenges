@@ -17,7 +17,9 @@ end
 def comparision(values)
     invert = values.invert
 
-    (invert.keys & values.keys).each {|k| puts ( invert[k] == values[k] ? invert[k] : k ) }.sum
+    (invert.keys & values.keys).each do |k| 
+        puts ( invert[k] == values[k] && ? invert[k] : k )
+    end
 end
 
 find_divisors(1000)

@@ -8,14 +8,12 @@ def find_divisors(n)
     values = {}
     (1..n).to_a.each do |n|
         num = []
-        (1..n).to_a.each do |i|
-            if n % i == 0
-                num << i
-            end
+        (1..n-1).to_a.each do |i|
+            num << i if n % i == 0
         end
         values[n] = num.sum
     end
     p values
 end
 
-p find_divisors(284)
+p find_divisors(1000)

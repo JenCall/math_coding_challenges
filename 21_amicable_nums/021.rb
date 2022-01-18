@@ -5,9 +5,17 @@
 # Therefore d(220) = 284. The proper divisors of 284 are 1, 2, 4, 71 and 142; so d(284) = 220.
 
 def find_divisors(n)
-    (1..n).each do |n|
-        p n
+    values = {}
+    (1..n).to_a.each do |n|
+        num = []
+        (1..n).to_a.each do |i|
+            if n % i == 0
+                num << i
+            end
+        end
+        values[n] = num.sum
     end
+    p values
 end
 
-p find_divisors(3)
+p find_divisors(284)

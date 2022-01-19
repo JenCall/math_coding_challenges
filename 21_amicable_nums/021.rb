@@ -28,9 +28,9 @@ end
 
 find_divisors(10000)
 
-# add other solution
+# Add better Solution 
 
-def proper_divisor(n)
+def proper_sdivisor(n)
     res = [1]
     i = 2
     while i * i <= n

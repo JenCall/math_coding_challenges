@@ -16,10 +16,16 @@ end
 
 def comparision(values)
     invert = values.invert
-
-    (invert.keys & values.keys).each do |k| 
-        puts ( invert[k] == values[k] && ? invert[k] : k )
+    new_hash = {}
+    # ( invert[k] == values[k] && ? invert[k] : k )
+    (invert).each do |keys_1, values_1| 
+        (values).each do |keys_2, values_2| 
+        if (keys_1 == keys_2 && values_1 == values_2)
+            new_hash[keys_1] = values_1
+        end
+        end
     end
+    p new_hash
 end
 
-find_divisors(1000)
+find_divisors(11000)

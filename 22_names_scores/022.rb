@@ -1,6 +1,4 @@
 # Problem 22
 
-input = File.read("names.txt").split
-input.each do |char|
-    char.replace(/\\/g, '');
-end
+input = File.open("names.txt", 'r')
+data = input.gets.scan(/\w+/).sort

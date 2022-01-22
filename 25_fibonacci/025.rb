@@ -4,13 +4,13 @@
 def find_fibonacci(n)
     fibonacci = [1, 1]
     i = 2
-    while i < n
-        num = fibonacci[-2] + fibonacci[-1]
-        fibonacci << num
+    while i < n 
+        fibonacci << fibonacci[-2] + fibonacci[-1]
         i += 1
     end
     p fibonacci
-    puts "finish"
 end
 
-find_fibonacci(12)
+
+
+find_fibonacci(100)

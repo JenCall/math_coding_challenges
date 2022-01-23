@@ -1,7 +1,7 @@
 # Problem 26
 # Find the longest recurring cycle in its decimal fraction part.
 
-# first solution - works for the example
+# my first solution
 def find_decimal(n)
     decimals = []
     (2..n).each { |n| decimals << (1 / n.to_f) }

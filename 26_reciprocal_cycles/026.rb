@@ -4,11 +4,8 @@
 # first solution - works for the example
 def find_decimal(n)
     decimals = []
-    (2..n).each do |n|
-        num = (1 / n.to_f)
-        decimals << num
-    end
-    p decimals.reverse
+    (2..n).each { |n| decimals << (1 / n.to_f) }
+    decimals.reverse
     find_recurring_cycle(decimals, n)
 end
 

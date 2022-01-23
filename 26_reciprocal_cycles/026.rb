@@ -14,16 +14,13 @@ end
 
 def find_recurring_cycle(decimals, n)
     recurring_nums = []
-    decimals.each do |n|
-        recurring_nums << n.to_s.split("").uniq.count - 2
-    end
-    i = recurring_nums.max
-    p (n - (recurring_nums.find_index(i) + 2))
+    decimals.each { |n| recurring_nums << n.to_s.split("").uniq.count - 2 }
+    puts "Answer: #{(n - (recurring_nums.find_index(recurring_nums.max) + 2))}"
 end
 
 find_decimal(1000)
 
-# net solution
+# improved solution from the internet
 puts (0..1000).map { |d| 
   (1..d).detect(lambda{0}) { |t| (10**t % d) == 1 } 
 }.each_with_index.max[1]

@@ -4,7 +4,7 @@
 def sum_diagonals(n)
     i = sum = 1
     cycle = 2
-    until i >= (n * n)
+    while i < (n * n)   # could be until i >=
         4.times { 
             i += cycle    
             sum += i

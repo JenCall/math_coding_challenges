@@ -12,7 +12,7 @@ def power_list(min_num, max_num)
 end
 
 def distinct_powers(powers_list)
-    puts "Answer: #{powers_list.uniq.sort} distinct term"
+    puts "Answer: #{powers_list.uniq.sort.count} distinct term"
 end
 
 power_list(2, 5)

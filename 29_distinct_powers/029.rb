@@ -4,9 +4,7 @@
 def power_list(min_num, max_num)
     powers = []
     (min_num..max_num).each do |base|
-        (min_num..max_num).each do |exponent|
-            powers << (base ** exponent)
-        end 
+        (min_num..max_num).each { |exponent| powers << (base ** exponent) }
     end
     distinct_powers(powers)
 end

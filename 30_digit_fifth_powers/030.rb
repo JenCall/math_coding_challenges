@@ -1,25 +1,19 @@
 # Problem 30
 # Find the sum of all the numbers that can be written as the sum of fifth powers of their digits.
 
-
-def find_number(n)
-    array_num = (1000..n).to_a
-    sum_fifth_power(array_num)
+def form_array(n)
+    integers = (1000..n).to_a
+    sum_fifth_power(integers)
 end
 
 def sum_fifth_power(list)
-    result = Array.new
+    fifth_powers = Array.new
     list.each do |n|
-        array = n.to_s.split("").map(&:to_i)
         sum = 0
-        array.each do |n|
-            sum += n ** 5
-        end
-        if n == sum
-            result << n
-        end
+        (n.to_s.split("").map(&:to_i)).each { |n| sum += n ** 5 }
+        fifth_powers << n if (n == sum)
     end
-    p result.sum
+    puts "Answer: #{fifth_powers.sum}"
 end
 
-find_number(500000)
+form_array(500000)

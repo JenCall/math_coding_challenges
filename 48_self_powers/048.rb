@@ -4,9 +4,10 @@
 def sum_self_powers(n)
     sum = 0
     (1..n).each do |i|
+        p i
         sum += i ** i
     end
-    puts "Answer: #{sum.to_s[-10...-1]}"
+    puts "Answer: #{sum.to_s[-10..-1]}"
 end
 
-sum_self_powers(10)
+sum_self_powers(1000)

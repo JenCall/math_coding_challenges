@@ -9,7 +9,7 @@ def find_power_counts(max)
             digits << num if num.to_s.split("").count == i
         end
     end
-    p digits.sum
+    p digits.count
 end
 
-find_power_counts(100)
+find_power_counts(300)

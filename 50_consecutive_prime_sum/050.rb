@@ -4,22 +4,18 @@
 require 'prime'
 
 def find_sum_below(n)
-     
     prime_nums = Prime.each(n).to_a
-
-    controle = Hash.new
+    control = Hash.new
     sum = 0
+    i = 1
     prime_nums.each do |n|
-        i = 1
         num = (sum += n)
-        if prime_nums.include?(num)
-            control[num] = i
-        end
+        control[num] = i if prime_nums.include?(num)
         i += 1
     end
     control
 end
-p find_sum_below(10000)
+p find_sum_below(1000)
 
 
 primes = Prime.each(10000).to_a
